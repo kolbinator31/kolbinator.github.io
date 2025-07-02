@@ -11,7 +11,22 @@
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
         header { background-color:  #c12734; color: white; padding: 10px 20px; text-align: center; }
         main { padding: 20px; text-align: center; }
-        footer { background-color: #333; color: white; text-align: center; padding: 10px 20px; position: fixed; bottom: 0; width: 100%; }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            width: 100%;
+            /* position: fixed;   <-- ENTFERNEN oder auskommentieren */
+            /* bottom: 0;         <-- ENTFERNEN oder auskommentieren */
+        }
+        /* --- Footer nur auf großen Bildschirmen fixieren --- */
+        @media (min-width: 900px) {
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
         img.logo { max-width: 600px; height: auto; margin-bottom: 20px; }
         a.pdf-link { display: inline-block; margin-top: 20px; padding: 10px 15px; background-color:  #c12734; color: white; text-decoration: none; border-radius: 5px; }
         a.pdf-link:hover { background-color:  #c12734; }
